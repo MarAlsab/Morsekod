@@ -1,5 +1,6 @@
 public class Largest {
-    // 11.Skapa ett program där två tal finns och det första talet skrivs ut om det är störst.
+    // 11.Skapa ett program där två tal finns och det
+    // första talet skrivs ut om det är störst.
 
     public static void main(String[] args) {
         int x = 15; //  Heltal: int byte short long.  // decimaltal: double float // char boolean
@@ -18,5 +19,6 @@ public class Largest {
 
         // Överkurs
 //        System.out.println((x > y) ? x : y);
+
     }
 }

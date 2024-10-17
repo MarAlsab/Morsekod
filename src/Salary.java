@@ -14,5 +14,6 @@ public class Salary {
         // System.out.println("Ny månadslön är : "+newSalary);
 
         System.out.println("månadslön "+(monthlySalary+provision));
+
     }
 }
