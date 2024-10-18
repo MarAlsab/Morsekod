@@ -9,6 +9,7 @@ public class Calculator {
         y = inputB;
     }
 
+    // Metod till objekten av Calculator
     public int add() {
         return x + y;
     }
@@ -23,5 +24,10 @@ public class Calculator {
 
     public double div() {
         return (double) x/y;
+    }
+
+    public void setNumbers(int numberA, int numberB){
+        x= numberA;
+        y=numberB;
     }
 }
