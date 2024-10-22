@@ -1,7 +1,7 @@
 package oop;
 
 public class Calculator {
-    int x, y;  // classens attribut
+    private int x, y;  // classens attribut
 
     // Konstruktorn som sätter två tal
     Calculator(int inputA, int inputB) {
@@ -23,11 +23,18 @@ public class Calculator {
     }
 
     public double div() {
-        return (double) x/y;
+        return (double) x / y;
     }
 
-    public void setNumbers(int numberA, int numberB){
-        x= numberA;
-        y=numberB;
+    public void setNumbers(int numberA, int numberB) {
+        x = numberA;
+        y = numberB;
+    }
+
+    public int power() {
+//        int result = 1;
+//        for (int i = 0; i < y; i++) result = result * x;
+//        return result;
+        return (int) Math.pow(x,y);
     }
 }
