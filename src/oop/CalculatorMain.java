@@ -16,6 +16,7 @@ public class CalculatorMain {
             System.out.println("2 Subtrahera");
             System.out.println("3 Multiplicera");
             System.out.println("4 Dividera");
+            System.out.println("5 Modulo % räkna ut resten");
             System.out.println("8 Uppdatera talen");
             System.out.println("9 Avsluta");
             choice = scanner.nextInt();
@@ -23,6 +24,7 @@ public class CalculatorMain {
             if (choice == 2) System.out.println(calc.sub());
             if (choice == 3) System.out.println(calc.mult());
             if (choice == 4) System.out.println(calc.div());
+            if (choice == 5) System.out.println(calc.rest());
             if (choice == 8) updateNumbers();
         } while (choice != 9);
     }
