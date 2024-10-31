@@ -37,6 +37,10 @@ public class Calculator {
 //        int result = 1;
 //        for (int i = 0; i < y; i++) result = result * x;
 //        return result;
-        return (int) Math.pow(x,y);
+        return (int) Math.pow(x, y);
+    }
+
+    public int rest() {
+        return x % y;
     }
 }
