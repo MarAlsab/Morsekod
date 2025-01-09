@@ -12,13 +12,15 @@ public class Names {
         // (inläsning av tal respektive utskrift av namn)
 
         String[] names = {"Ada", "Beda", "Cålle"};
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Skriv in ett tal som beskriver vilket namn man skall skriva ut i ordningen Variant 1: ");
+
         // Variant 1
+        System.out.print("Skriv in ett tal som beskriver vilket namn man skall skriva ut i ordningen Variant 1: ");
         try {
-            int number = scanner.nextInt();
+            Scanner scanner = new Scanner(System.in);
+            int number1 = scanner.nextInt();
+            scanner.close();
             try {
-                System.out.println(names[number]);
+                System.out.println(names[number1]);
             } catch (Exception exception) {
                 System.out.println(exception);
                 System.out.println("Array Fel !!!");
@@ -27,16 +29,17 @@ public class Names {
             System.out.println(exception);
             System.out.println("Input Fel !!!");
         }
-        System.out.print("Skriv in ett tal som beskriver vilket namn man skall skriva ut i ordningen Variant 2: ");
 
         // Variant 2
+        System.out.print("Skriv in ett tal som beskriver vilket namn man skall skriva ut i ordningen Variant 2: ");
         try {
-            int number = scanner.nextInt();
-            System.out.println(names[number]);
+            Scanner scanner = new Scanner(System.in);
+            int number2 = scanner.nextInt();
+            scanner.close();
+            System.out.println(names[number2]);
         } catch (ArrayIndexOutOfBoundsException exception) {
             System.out.println(exception);
             System.out.println("Array Fel !!!");
-
         } catch (InputMismatchException exception) {
             System.out.println(exception);
             System.out.println("Input Fel !!!");
