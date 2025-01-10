@@ -18,7 +18,7 @@ public class IntegerArray {
     }
 
     private static int readInt() {
-        Scanner scanner = new Scanner(System.in));
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Skriv in ett nummer: ");
         return scanner.nextInt();
     }
