@@ -1,8 +1,10 @@
+package automation.ovning1extra;
+
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class TryCatchExer1 {
+public class PierreTryCatch {
     public static void main(String[] args) {
         int[] numbers = new int[5];
         int count = 0;
