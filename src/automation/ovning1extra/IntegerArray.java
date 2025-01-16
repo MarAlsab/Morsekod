@@ -11,28 +11,43 @@ import java.util.Scanner;
 //  tills det att användaren har fyllt i fem heltal.
 // Användaren ska få ett tydligt felmeddelande om den skriver fel.
 
+// Try/catch
+//
+//3. Låt användaren välja vilket index de vill se av heltalen.
+//  Hantera ArrayIndexOutOfBoundsException.
+// Användaren ska kunna använda denna funktionalitet i all oändlighet.
+
 public class IntegerArray {
     public static void main(String[] args) {
-        int number = 0;
+        int index = 0;
         int[] integerArray = new int[5];
-        for (int i = 0; i < 5; i++) {
-            while (true) {
-                try {
-                    number = readInt();
-                    break;
-                } catch (InputMismatchException ime) {
-                    System.out.println("Du skrev inget heltal");
-                }
+        while (index < 5) {
+            try {
+                integerArray[index] = readInt();
+                index++;
+            } catch (InputMismatchException ime) {
+                System.out.println("Du skrev inget heltal");
             }
-            System.out.println("Vårt inlästa nummer är: " + number);
-            integerArray[i] = number;
         }
         System.out.println(Arrays.toString(integerArray));
+        while (true) {
+            System.out.print("Skriv en ordning 0-4 av arrayen för att se posten: ");
+            try {
+                System.out.println(integerArray[getOrder()]);
+            } catch (ArrayIndexOutOfBoundsException aiobe) {
+                System.out.println("Fel inmatad post index");
+            }
+        }
     }
 
     private static int readInt() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Skriv in ett nummer: ");
+        return scanner.nextInt();
+    }
+
+    private static int getOrder() {
+        Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
 }
