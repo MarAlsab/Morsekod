@@ -2,12 +2,11 @@ package automation.hashmap;
 
 import java.util.HashMap;
 import java.util.Scanner;
-import java.util.Set;
 
 // Skapa en HashMap för att lagra namn och ålder. Lägg till några namn och deras motsvarande ålder.
 // Uppdatera programmet så att det skriver ut åldern på det namn man har läst in med Scanner och
 // som matchar namn lagrade i din HashMap
-public class NameAge {
+public class NameAgeMain {
     public static void main(String[] args) {
         // Skapar em Hashmap med namn som key (String) och en ålder (Integer) som värde
         HashMap<String,Integer> nameAge = new HashMap<>();
