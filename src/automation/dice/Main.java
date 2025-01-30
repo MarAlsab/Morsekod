@@ -15,7 +15,7 @@ public class Main {
             Player player = players.get(kastIndex);
             int sumRound = 0;
             boolean again= true;
-            System.out.println("Att kasta är: "+player.getName());
+            System.out.println("************ Att kasta är: "+player.getName());
             System.out.println("Du har: "+player.getSumTotal());
             while (again){
                 int dice = dice();
@@ -23,6 +23,11 @@ public class Main {
                 if (dice != 1){
                     sumRound += dice;
                     System.out.println("Din summa i omgången är: "+sumRound);
+                    if (sumRound + player.getSumTotal() >= 50){
+                        System.out.println(" ###############  DU VANN !!!!!!!!!!!");
+                        gameEnd = true;
+                        break;
+                    }
                     System.out.print("Vill du fortsätta kasta (Ja/Nej)? ");
                     String input = scanner.nextLine();
                     if (input.equals("Nej")) again = false;
@@ -33,7 +38,12 @@ public class Main {
                 }
                 System.out.println();
             }
-
+            // Addera poängen till banken
+            player.setSumTotal(sumRound+player.getSumTotal());
+            // Next player
+            if (kastIndex < players.size()-1){
+                kastIndex++;
+            } else kastIndex=0;
         }
 
 
