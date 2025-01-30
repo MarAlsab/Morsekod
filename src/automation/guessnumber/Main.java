@@ -11,11 +11,14 @@ public class Main {
         int highest = scanner.nextInt();
         Randomizer rand = new Randomizer(lowest,highest);
         String result ="";
+        int attempt=0;
         while (!result.equals("Du vann")){
             System.out.print("Gissa ett nummer ");
             int number = scanner.nextInt();
             result = rand.guess(number);
             System.out.println(result);
+            attempt++;
+            System.out.println("Försök nummer "+attempt);
         }
     }
 }

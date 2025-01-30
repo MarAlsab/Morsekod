@@ -1,7 +1,8 @@
 package automation.guessnumber;
 
 public class Randomizer {
-    int randomNumber;
+    private int randomNumber;
+
     Randomizer(int lowest,int highest){
         randomNumber = (int) (Math.random()*(highest-lowest+1))+lowest;
     }
